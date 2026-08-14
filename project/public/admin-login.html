@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin & Staff Login | Elon Studio Salon</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+      body {
+        background-color: #121212;
+        background-image: radial-gradient(
+          circle at center,
+          rgba(212, 175, 55, 0.08) 0%,
+          transparent 70%
+        );
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .login-card {
+        background: #1e1e1e;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 2.5rem;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        max-width: 420px;
+      }
+      .text-gold {
+        color: #d4af37 !important;
+      }
+      .btn-gold {
+        background-color: #d4af37;
+        color: #121212;
+        font-weight: 600;
+        border: none;
+        transition: all 0.3s ease;
+      }
+      .btn-gold:hover {
+        background-color: #f3e5ab;
+        color: #121212;
+        transform: translateY(-2px);
+      }
+      .form-control {
+        background-color: #2a2a2a;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+      }
+      .form-control:focus {
+        background-color: #2a2a2a;
+        color: #ffffff;
+        border-color: #d4af37;
+        box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+      }
+      .form-control::placeholder {
+        color: #888888;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-card">
+      <!-- Logo / Brand Header -->
+      <div class="text-center mb-4">
+        <h2 class="fw-bold text-white mb-1">
+          <span class="text-gold">Elon</span>Studio Salon
+        </h2>
+        <p class="text-muted small">Portal Access for Admins & Staff</p>
+      </div>
+
+      <!-- Alert Notification Box -->
+      <div
+        id="loginMessage"
+        class="alert d-none text-center"
+        role="alert"
+      ></div>
+
+      <!-- Login Form -->
+      <form id="adminLoginForm">
+        <div class="mb-3">
+          <label for="email" class="form-label text-light small fw-semibold"
+            >Email Address</label
+          >
+          <div class="input-group">
+            <span class="input-group-text bg-dark border-secondary text-gold">
+              <i class="bi bi-envelope"></i>
+            </span>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="admin@smartsalon.com"
+              required
+              autocomplete="username"
+            />
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label for="password" class="form-label text-light small fw-semibold"
+            >Password</label
+          >
+          <div class="input-group">
+            <span class="input-group-text bg-dark border-secondary text-gold">
+              <i class="bi bi-lock"></i>
+            </span>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Enter password"
+              required
+              autocomplete="current-password"
+            />
+            <button
+              class="btn btn-outline-secondary border-secondary text-muted"
+              type="button"
+              id="togglePassword"
+            >
+              <i class="bi bi-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-gold w-100 py-2 rounded-pill shadow-sm"
+          id="loginBtn"
+        >
+          <span id="loginBtnText">Sign In</span>
+          <span
+            id="loginBtnSpinner"
+            class="spinner-border spinner-border-sm d-none"
+            role="status"
+            aria-hidden="true"
+          ></span>
+        </button>
+      </form>
+
+      <div class="text-center mt-4">
+        <a
+          href="index.html"
+          class="text-muted small text-decoration-none hover-gold"
+        >
+          <i class="bi bi-arrow-left me-1"></i> Back to Main Website
+        </a>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Password Visibility Toggle JS Script -->
+    <script>
+      document
+        .getElementById("togglePassword")
+        ?.addEventListener("click", function () {
+          const passwordInput = document.getElementById("password");
+          const icon = this.querySelector("i");
+          if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            icon.classList.replace("bi-eye", "bi-eye-slash");
+          } else {
+            passwordInput.type = "password";
+            icon.classList.replace("bi-eye-slash", "bi-eye");
+          }
+        });
+    </script>
+
+    <!-- Admin Login Logic JS -->
+    <script src="assets/js/admin-login.js"></script>
+  </body>
+</html>

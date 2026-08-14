@@ -1,0 +1,104 @@
+[
+  {
+    "id": "appt_1786027276192",
+    "name": "harsh",
+    "phone": "suthar",
+    "service": "Precision Haircut ($65)",
+    "specialist": "David (Color Specialist)",
+    "date": "2026-08-14",
+    "time": "20:11",
+    "status": "Completed",
+    "createdAt": "2026-08-06T14:41:16.192Z",
+    "assignedToStaffId": "staff_1785512500000",
+    "assignedToStaffName": "David",
+    "assignedToId": "staff_1785512500000",
+    "assignedToName": "David",
+    "updatedAt": "2026-08-06T14:44:52.934Z",
+    "reminder": {
+      "oneHourSent": false,
+      "thirtyMinSent": false
+    }
+  },
+  {
+    "id": "appt_1786071713069",
+    "name": "kassim",
+    "phone": "9164785685",
+    "service": "Luxury Hair Color ($120+)",
+    "specialist": "David (Color Specialist)",
+    "date": "2026-08-07",
+    "time": "11:31",
+    "status": "No-Show",
+    "createdAt": "2026-08-07T03:01:53.069Z",
+    "assignedToStaffId": "staff_msk8r9zl-s5e3wnk1qog",
+    "assignedToStaffName": "sarah",
+    "assignedToId": "staff_msk8r9zl-s5e3wnk1qog",
+    "assignedToName": "sarah",
+    "updatedAt": "2026-08-08T10:40:54.124Z",
+    "reminder": {
+      "oneHourSent": false,
+      "thirtyMinSent": false
+    },
+    "markedNoShowAt": "2026-08-13T15:51:13.181Z"
+  },
+  {
+    "id": "appt_1786185487873",
+    "name": "Bhavesh Suthar",
+    "phone": "9116888648",
+    "service": "Royal Beard Trim ($45)",
+    "specialist": "Sarah (Master Stylist)",
+    "date": "2026-08-08",
+    "time": "16:18",
+    "status": "Assigned",
+    "createdAt": "2026-08-08T10:38:07.873Z",
+    "reminder": {
+      "oneHourSent": true,
+      "thirtyMinSent": true
+    },
+    "assignedToStaffId": "staff_msk8r9zl-s5e3wnk1qog",
+    "assignedToStaffName": "sarah",
+    "assignedToId": "staff_msk8r9zl-s5e3wnk1qog",
+    "assignedToName": "sarah",
+    "updatedAt": "2026-08-08T10:39:27.706Z"
+  },
+  {
+    "id": "appt_1786187027115",
+    "name": "Test Customer",
+    "phone": "9876543210",
+    "service": "Precision Haircut ($65)",
+    "specialist": "Anyone Available",
+    "date": "2026-08-08",
+    "time": "16:38",
+    "status": "No-Show",
+    "createdAt": "2026-08-08T11:03:47.115Z",
+    "reminder": {
+      "oneHourSent": true,
+      "thirtyMinSent": true
+    },
+    "assignedToStaffId": "staff_msk8r9zl-s5e3wnk1qog",
+    "assignedToStaffName": "sarah",
+    "assignedToId": "staff_msk8r9zl-s5e3wnk1qog",
+    "assignedToName": "sarah",
+    "updatedAt": "2026-08-08T11:04:44.447Z",
+    "markedNoShowAt": "2026-08-13T15:38:15.684Z"
+  },
+  {
+    "id": "appt_1786635394258",
+    "name": "Rahul Sharma",
+    "phone": "9876543210",
+    "service": "Royal Beard Trim ($45)",
+    "specialist": "Sarah (Master Stylist)",
+    "date": "2026-08-13",
+    "time": "21:09",
+    "status": "Completed",
+    "createdAt": "2026-08-13T15:36:34.258Z",
+    "reminder": {
+      "oneHourSent": true,
+      "thirtyMinSent": true
+    },
+    "assignedToStaffId": "staff_msroxfpi-utdftv5no4q",
+    "assignedToStaffName": "Emma",
+    "assignedToId": "staff_msroxfpi-utdftv5no4q",
+    "assignedToName": "Emma",
+    "updatedAt": "2026-08-13T15:48:18.678Z"
+  }
+]

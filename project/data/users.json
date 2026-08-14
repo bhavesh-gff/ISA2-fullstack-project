@@ -1,0 +1,48 @@
+[
+  {
+    "id": "admin_1785506019620",
+    "_id": "admin_1785506019620",
+    "name": "Salon Manager",
+    "email": "admin@smartsalon.com",
+    "password": "$2b$10$XlRGN6NMJPar.YGLYjoJQ.acnRQIOVukHcUf105hAnvPMBF91Hbqe",
+    "role": "admin",
+    "createdAt": "2026-07-31T13:53:39.620Z"
+  },
+  {
+    "id": "staff_1785512500000",
+    "_id": "staff_1785512500000",
+    "name": "David",
+    "email": "david@smartsalon.com",
+    "password": "$2b$10$eJmnTzGepkQ0O0zRVlnVZuNbdUSy.6qvLQAUxnhehZCwjPpF0HOBy",
+    "role": "staff",
+    "phone": "",
+    "specialization": "General Staff",
+    "status": "active",
+    "createdAt": "2026-07-31T13:53:39.620Z",
+    "updatedAt": "2026-07-31T13:53:39.620Z"
+  },
+  {
+    "id": "staff_msk8r9zl-s5e3wnk1qog",
+    "name": "sarah",
+    "email": "sarah@smartsalon.com",
+    "phone": "",
+    "specialization": "General Staff",
+    "password": "$2b$10$.d/JE.ZPV2wmrl6vNUSWxuJNMfG11xasIIfe5WR8FOzDT5Ev7HQta",
+    "role": "staff",
+    "status": "active",
+    "createdAt": "2026-08-08T10:39:08.625Z",
+    "updatedAt": "2026-08-08T10:39:08.625Z"
+  },
+  {
+    "id": "staff_msroxfpi-utdftv5no4q",
+    "name": "Emma",
+    "email": "emma@smartsalon.com",
+    "phone": "",
+    "specialization": "General Staff",
+    "password": "$2b$10$1Lh1jwIZf9rhfui6rompd.e3tY.6sFncpt7x2zz/6r4/r7ju7AEQ6",
+    "role": "staff",
+    "status": "active",
+    "createdAt": "2026-08-13T15:46:13.062Z",
+    "updatedAt": "2026-08-13T15:46:13.062Z"
+  }
+]

@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elon Studio Salon | Book Appointment</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-dark-luxury text-white">
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark-luxury fixed-top border-bottom border-secondary border-opacity-10"
+    >
+      <div class="container">
+        <a class="navbar-brand fs-3 fw-bold text-white" href="index.html">
+          <span class="text-gold">Elon</span>Studio Salon
+        </a>
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="bi bi-list fs-1 text-gold"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+              <a href="book.html" class="btn btn-gold active"
+                >Book Appointment</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main style="padding-top: 120px">
+      <section class="py-5">
+        <div class="container reveal">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <!-- Form Card Container -->
+              <div
+                class="bg-dark-card p-4 p-md-5 rounded border border-secondary border-opacity-10 shadow-lg"
+              >
+                <div class="text-center mb-5">
+                  <h5 class="text-gold text-uppercase tracking-wide mb-2">
+                    Exclusive Reservation
+                  </h5>
+                  <h1 class="fw-bold display-6 text-white">
+                    Book Your <span class="text-gold">Appointment</span>
+                  </h1>
+                  <p class="text-muted">
+                    Reserve your luxury experience instantly with our master
+                    stylists.
+                  </p>
+                  <div
+                    class="mx-auto mt-3"
+                    style="
+                      width: 50px;
+                      height: 3px;
+                      background-color: var(--primary-gold, #d4af37);
+                    "
+                  ></div>
+                </div>
+
+                <!-- Alert Box for Success/Error Messages -->
+                <div
+                  id="bookingAlert"
+                  class="alert d-none text-center mb-4"
+                  role="alert"
+                ></div>
+
+                <form id="bookingForm">
+                  <div class="row g-4">
+                    <!-- Full Name -->
+                    <div class="col-md-6">
+                      <label class="form-label text-muted small fw-semibold"
+                        >Full Name *</label
+                      >
+                      <div class="input-group">
+                        <span
+                          class="input-group-text bg-dark border-secondary border-opacity-25 text-gold"
+                          ><i class="bi bi-person"></i
+                        ></span>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          class="form-control bg-dark border-secondary border-opacity-25 text-white p-3"
+                          required
+                          placeholder="John Doe"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="col-md-6">
+                      <label class="form-label text-muted small fw-semibold"
+                        >Mobile Number *</label
+                      >
+                      <div class="input-group">
+                        <span
+                          class="input-group-text bg-dark border-secondary border-opacity-25 text-gold"
+                          ><i class="bi bi-telephone"></i
+                        ></span>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          class="form-control bg-dark border-secondary border-opacity-25 text-white p-3"
+                          required
+                          placeholder="+1 234 567 8900"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Service Selection -->
+                    <div class="col-md-6">
+                      <label class="form-label text-muted small fw-semibold"
+                        >Select Service *</label
+                      >
+                      <div class="input-group">
+                        <span
+                          class="input-group-text bg-dark border-secondary border-opacity-25 text-gold"
+                          ><i class="bi bi-scissors"></i
+                        ></span>
+                        <select
+                          id="service"
+                          name="service"
+                          class="form-select bg-dark border-secondary border-opacity-25 text-white p-3"
+                          required
+                        >
+                          <option value="" disabled selected>
+                            Choose Service...
+                          </option>
+                          <option
+                            value="Precision Haircut ($65)"
+                            class="bg-dark text-white"
+                          >
+                            Precision Haircut ($65)
+                          </option>
+                          <option
+                            value="Luxury Hair Color ($120+)"
+                            class="bg-dark text-white"
+                          >
+                            Luxury Hair Color ($120+)
+                          </option>
+                          <option
+                            value="Royal Beard Trim ($45)"
+                            class="bg-dark text-white"
+                          >
+                            Royal Beard Trim ($45)
+                          </option>
+                          <option
+                            value="Deep Tissue Hair Spa ($85)"
+                            class="bg-dark text-white"
+                          >
+                            Deep Tissue Hair Spa ($85)
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Staff Selection -->
+                    <div class="col-md-6">
+                      <label class="form-label text-muted small fw-semibold"
+                        >Preferred Specialist (Optional)</label
+                      >
+                      <div class="input-group">
+                        <span
+                          class="input-group-text bg-dark border-secondary border-opacity-25 text-gold"
+                          ><i class="bi bi-star"></i
+                        ></span>
+                        <select
+                          id="specialist"
+                          name="specialist"
+                          class="form-select bg-dark border-secondary border-opacity-25 text-white p-3"
+                        >
+                          <option value="Anyone Available" selected>
+                            Anyone Available
+                          </option>
+                          <option
+                            value="Sarah (Master Stylist)"
+                            class="bg-dark text-white"
+                          >
+                            Sarah (Master Stylist)
+                          </option>
+                          <option
+                            value="David (Color Specialist)"
+                            class="bg-dark text-white"
+                          >
+                            David (Color Specialist)
+                          </option>
+                          <option
+                            value="Emma (Barber Expert)"
+                            class="bg-dark text-white"
+                          >
+                            Emma (Barber Expert)
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Date -->
+                    <div class="col-md-6">
+                      <label class="form-label text-muted small fw-semibold"
+                        >Preferred Date *</label
+                      >
+                      <div class="input-group">
+                        <span
+                          class="input-group-text bg-dark border-secondary border-opacity-25 text-gold"
+                          ><i class="bi bi-calendar-event"></i
+                        ></span>
+                        <input
+                          type="date"
+                          id="date"
+                          name="date"
+                          class="form-control bg-dark border-secondary border-opacity-25 text-white p-3"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="col-md-6">
+                      <label class="form-label text-muted small fw-semibold"
+                        >Time Slot *</label
+                      >
+                      <div class="input-group">
+                        <span
+                          class="input-group-text bg-dark border-secondary border-opacity-25 text-gold"
+                          ><i class="bi bi-clock"></i
+                        ></span>
+                        <input
+                          type="time"
+                          id="time"
+                          name="time"
+                          class="form-control bg-dark border-secondary border-opacity-25 text-white p-3"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="col-12 mt-4">
+                      <button
+                        type="submit"
+                        id="submitBookingBtn"
+                        class="btn btn-gold w-100 py-3 fs-5 fw-bold text-uppercase"
+                      >
+                        <span id="btnText">Confirm Reservation</span>
+                        <span
+                          id="btnSpinner"
+                          class="spinner-border spinner-border-sm d-none"
+                          role="status"
+                          aria-hidden="true"
+                        ></span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-dark-luxury text-white pt-5 pb-3 mt-5 border-top border-secondary border-opacity-10"
+    >
+      <div class="container pt-4">
+        <div class="row g-4 mb-4">
+          <div class="col-lg-4 mb-4">
+            <h3 class="fw-bold mb-3">
+              <span class="text-gold">Smart</span>Salon
+            </h3>
+            <p class="text-muted pe-lg-4">
+              Your premium destination for luxury styling and wellness. Seamless
+              booking, exceptional service.
+            </p>
+            <div class="d-flex gap-3 mt-4">
+              <a
+                href="#"
+                class="text-white bg-dark-card border border-secondary border-opacity-25 rounded-circle p-2 d-flex align-items-center justify-content-center"
+                style="width: 40px; height: 40px"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="#"
+                class="text-white bg-dark-card border border-secondary border-opacity-25 rounded-circle p-2 d-flex align-items-center justify-content-center"
+                style="width: 40px; height: 40px"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="text-white bg-dark-card border border-secondary border-opacity-25 rounded-circle p-2 d-flex align-items-center justify-content-center"
+                style="width: 40px; height: 40px"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="text-gold mb-4">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="about.html" class="text-muted text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="services.html" class="text-muted text-decoration-none"
+                  >Services</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="gallery.html" class="text-muted text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="contact.html" class="text-muted text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="text-gold mb-4">Opening Hours</h5>
+            <ul class="list-unstyled text-muted">
+              <li class="d-flex justify-content-between mb-2">
+                <span>Mon - Fri:</span> <span>9:00 AM - 8:00 PM</span>
+              </li>
+              <li class="d-flex justify-content-between mb-2">
+                <span>Saturday:</span> <span>10:00 AM - 6:00 PM</span>
+              </li>
+              <li class="d-flex justify-content-between mb-2">
+                <span>Sunday:</span> <span>Closed</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mb-4">
+            <h5 class="text-gold mb-4">Contact Info</h5>
+            <ul class="list-unstyled text-muted">
+              <li class="mb-3">
+                <i class="bi bi-geo-alt text-gold me-2"></i> 123 Luxury Avenue,
+                NY 10001
+              </li>
+              <li class="mb-3">
+                <i class="bi bi-telephone text-gold me-2"></i> +1 (555) 123-4567
+              </li>
+              <li class="mb-3">
+                <i class="bi bi-envelope text-gold me-2"></i>
+                hello@elonstudiosalon.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="text-center text-muted border-top border-secondary border-opacity-10 pt-3 mt-4"
+        >
+          <small
+            >&copy; 2026 Elon Studio Salon. All Rights Reserved. Designed for
+            Luxury.</small
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script to set minimum booking date to Today -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const dateInput = document.getElementById("date");
+        if (dateInput) {
+          const today = new Date().toISOString().split("T")[0];
+          dateInput.setAttribute("min", today);
+        }
+      });
+    </script>
+
+    <!-- Bootstrap 5 JS & Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

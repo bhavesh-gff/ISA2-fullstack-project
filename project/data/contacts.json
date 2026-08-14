@@ -1,0 +1,20 @@
+[
+  {
+    "id": "contact_1786637235554",
+    "name": "Rahul Sharma",
+    "email": "rahul.sharma@gmail.com",
+    "phone": "",
+    "subject": "Appointment Inquiry",
+    "message": "Hell to know more about your salon services and available appointment timings.o, I would like",
+    "createdAt": "2026-08-13T16:07:15.554Z"
+  },
+  {
+    "id": "contact_1786683737196",
+    "name": "Amit Verma",
+    "email": "amit.verma@example.com",
+    "phone": "",
+    "subject": "Opening Hours on Sunday",
+    "message": "Hello, are you open on Sunday mornings for a quick beard trim and haircut, or is it strictly closed?",
+    "createdAt": "2026-08-14T05:02:17.196Z"
+  }
+]
